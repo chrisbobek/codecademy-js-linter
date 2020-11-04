@@ -7,14 +7,14 @@ function countOverusedWords(storyWordsArray, overusedWordsArray) {
     for (let i = 0; i < overusedWordsArray.length; i++) {
         let counter = 0;
         let index = storyWordsArray.indexOf(overusedWordsArray[i]);
-        console.log(`index: ${index}`);
+        // console.log(`for index ${index}`);
         while (index > -1) {
+            // console.log(`while index: ${index}`);
             counter++;
-            index = storyWordsArray.indexOf(overusedWordsArray[i], index);
+            index = storyWordsArray.indexOf(overusedWordsArray[i], index + 1);
         }
-        console.log(`${overusedWordsArray[i]} occurs ${counter} times.`);
+        console.log(`The word '${overusedWordsArray[i]}' occurs ${counter} times.`);
     }
-
 }
 
 countOverusedWords(storyWords, overusedWords);
