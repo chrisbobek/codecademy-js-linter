@@ -1,0 +1,1 @@
+# codecademy-js-linter
