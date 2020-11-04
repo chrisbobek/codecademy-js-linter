@@ -7,6 +7,7 @@ function countOverusedWords(storyWordsArray, overusedWordsArray) {
     for (let i = 0; i < overusedWordsArray.length; i++) {
         let counter = 0;
         let index = storyWordsArray.indexOf(overusedWordsArray[i]);
+        console.log(`index: ${index}`);
         while (index > -1) {
             counter++;
             index = storyWordsArray.indexOf(overusedWordsArray[i], index);
