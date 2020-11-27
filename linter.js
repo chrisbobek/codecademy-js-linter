@@ -22,13 +22,11 @@ countOverusedWords(storyWords, overusedWords);
 let counter = 0;
 
 function countSentences(word) {
-  console.log(`countSentences: ${word}`);
   let re = /[\W]/;
   if (re.test(word)) {
     counter += 1; 
-    console.log(`counter: ${counter}`);
     }
 }
 
 storyWords.forEach(countSentences);
-console.log(`sentenceCount: ${counter}`);
+console.log(`There are ${counter} sentence(s) in the story.`);
