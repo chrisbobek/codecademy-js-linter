@@ -18,3 +18,17 @@ function countOverusedWords(storyWordsArray, overusedWordsArray) {
 }
 
 countOverusedWords(storyWords, overusedWords);
+
+let counter = 0;
+
+function countSentences(word) {
+  console.log(`countSentences: ${word}`);
+  let re = /[\W]/;
+  if (re.test(word)) {
+    counter += 1; 
+    console.log(`counter: ${counter}`);
+    }
+}
+
+storyWords.forEach(countSentences);
+console.log(`sentenceCount: ${counter}`);
